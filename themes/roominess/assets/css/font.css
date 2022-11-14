@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "AlimamaShuHeiTi";
+    src: url(/font/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff2) format("woff2"),url(/font/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITCAvantGardeStd";
+    font-weight: 300;
+    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Bk.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITCAvantGardeStd";
+    font-weight: 500;
+    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Md.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITCAvantGardeStd";
+    font-weight: 600;
+    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Demi.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ITCAvantGardeStd";
+    font-weight: 700;
+    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Bold.woff2) format("woff2");
+    font-display: swap;
+}

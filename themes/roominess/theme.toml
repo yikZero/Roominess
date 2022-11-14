@@ -1,0 +1,12 @@
+name = "Roominess"
+license = "MIT"
+licenselink = "https://raw.githubusercontent.com/yikZero/Roominess/main/LICENSE"
+description = "Resume"
+homepage = "https://blog.yikzero.com"
+tags = ['hugo']
+features = ['responsive']
+min_version = "0.60.0"
+
+[author]
+  name = "yikzero"
+  homepage = "https://ro.yikzero.com/"

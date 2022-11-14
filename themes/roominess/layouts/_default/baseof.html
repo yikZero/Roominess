@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}zh-CN{{ end }}">
+{{- partial "head.html" . -}}
+<body>
+	{{- partial "header.html" . -}}
+	{{- block "main" . }}{{- end }}
+	{{/*  {{- partialCached "footer.html" . -}}  */}}
+	{{- partialCached "script.html" . -}}
+</body>
+</html>

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<style>{{.Params.custom_css | safeCSS}}</style>
+<section class="noodle">
+    <div class="noodle-container">
+        <img class="noodle-img" src="/img/background.png" alt="background">
+        <div class="noodle-content-container">
+            <div class="noodle-content-title">{{ site.Params.noodle_title | safeHTML }}</div>
+            <div class="noodle-content-desc">{{ site.Params.noodle_desc | safeHTML }}</div>
+            <a class="noodle-email" href="mailto:{{ site.Params.noodle_email | safeHTML }}">@ 联系我</a>
+        </div>
+    </div>
+</section>
+{{ end }}

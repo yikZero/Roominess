@@ -1,0 +1,65 @@
+# -------- Default Configuration -------- #
+
+baseURL = 'https://job.yikzero.com'
+languageCode = 'zh-CN'
+title = 'yikZero | ROOMINESS'
+theme = "roominess"
+sectionPagesMenu = "main"
+
+# -------- Default Parameters -------- #
+
+[params]
+    favicon = "img/favicon.ico"
+    logo = "img/logo.svg"
+    #Meta data
+    description = "Show Myself"
+    author = "yikZero"
+    #noodleContent
+    noodle_title = "Hi,我是张毅吉。<br/>界面交互设计师。"
+    noodle_desc = "目前，我在杭州 @亚信科技 工作，<br/>一年界面交互设计经验。<br/>我喜欢做设计、写代码、研究些新奇玩意 😊。"
+    noodle_email = "i@yikzero.com"
+    #Copyright
+    copyright = "Build with Hugo<br/>Copyright 2022 © yikZero"
+
+    # -------- Social site -------- #
+    [[params.social]]
+    name = "E-Mail"
+    link = "mailto:i@yikzero.com"
+
+    [[params.social]]
+    name = "Blog"
+    link = "https://ro.yikzero.com"
+
+    [[params.social]]
+    name = "Github"
+    link = "https://github.com/yikzero"
+
+# -------- Menu -------- #
+
+[menu]
+    [[menu.main]]
+    identifier = 'homepage'
+    name = '首页'
+    url = '/'
+    weight = 1
+    
+    [[menu.main]]
+    identifier = 'gallery'
+    name = '设计博物馆'
+    url = '/gallery/'
+    weight = 2
+
+    [[menu.main]]
+    identifier = 'about'
+    name = '关于我'
+    url = '/about/'
+    weight = 3
+
+# -------- Plugins -------- #
+# CSS Plugins
+# [[params.plugins.css]]
+# link = "plugins/bootstrap/bootstrap.min.css"
+
+# JS Plugins
+# [[params.plugins.js]]
+# link = "plugins/jQuery/jquery.min.js"

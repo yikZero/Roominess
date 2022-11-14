@@ -1,0 +1,121 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #E7E7E9;
+    display: block;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+    font-size: 16px;
+}
+
+.noodle{
+    display: block;
+}
+
+.noodle-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    .noodle-img{
+        width: auto;
+        height: auto;
+        max-width: 1440px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -720px;
+    }
+    .noodle-content-container{
+        margin-top: 291px;
+        .noodle-content-title{
+            font-size: 64px;
+            line-height: 82px;
+            font-family: "AlimamaShuHeiTi";
+            color: #1F2833;
+            margin-bottom: 12px;
+        }
+        .noodle-content-desc{
+            font-size: 16px;
+            line-height: 24px;
+            color: #5B646F;
+            margin-bottom: 32px;
+        }
+        a.noodle-email{
+            font-size: 14px;
+            font-family: "AlimamaShuHeiTi";
+            line-height: 22px;
+            padding: 9px 16px;
+            color: #FFFFFF;
+            background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+            border-style: none;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    }
+}
+
+header{
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 32px;
+    height: 100%;
+    margin: auto;
+}
+
+.logo-container{
+    width: 107px;
+    height: 48px;
+    .logo{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu-text-container{
+    display: flex;
+    align-items: center;
+    li{
+        list-style: none;
+        height: auto;
+        width: auto;
+        margin-right: 24px;
+        a{  
+            font-size: 16px;
+            font-weight: 700;
+            font-family: "AlimamaShuHeiTi";
+            color: #1F2833;
+            line-height: 24px;
+            padding: 4px 6px;
+            text-decoration: none;
+            transition: color 200ms ease;
+        }
+        a:hover{
+            border-bottom: 2px solid #1F2833;
+        }
+        .active{
+            border-bottom: 2px solid #1F2833;
+        }
+    }
+}
+
+.theme-change-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+

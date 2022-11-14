@@ -1,0 +1,28 @@
+<!-- Start Menu -->
+<header>
+  <div class="menu-container">
+    <a class="logo-container" href="{{ site.BaseURL | relLangURL }}">
+      <img class="logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Title }}">
+    </a>
+    <ul class="menu-text-container">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+      {{- $page_url:= $currentPage.Permalink | absLangURL }}
+        <li>
+            <a {{- if eq $menu_item_url $page_url }} class="active" {{- end }} href="{{ .URL }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+      {{ end }}
+        <li>
+            <a href="https://t.yikzero.com/d/Ali/Job/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86%20%E5%BC%A0%E6%AF%85%E5%90%89%2022%E5%B1%8A-%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6.pdf" target="_blank">
+              <span>简历</span>
+            </a>
+        </li>
+    </ul>
+    <div class="theme-change-button"></div>
+  </div>
+</header>
+<!-- End Menu -->

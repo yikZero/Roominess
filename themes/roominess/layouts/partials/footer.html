@@ -1,0 +1,26 @@
+<footer>
+  <div class="footer-container">
+    <div class="footer">
+      <ul class="footer-item">
+        {{ range site.Params.social }}
+        <li>
+          <a href="{{ .link | safeURL }}">
+            <span>{{ .name }}</span>
+          </a>
+        </li>
+        {{ end }}
+        <li>
+          <a href="#">
+            <span>Wechat</span>
+            <div class="footer-popover">
+              <img src="#">
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright">
+        {{ site.Params.copyright | markdownify }}
+      </div>
+    </div>
+  </div>
+</footer>
