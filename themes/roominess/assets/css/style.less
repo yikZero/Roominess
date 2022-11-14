@@ -10,52 +10,22 @@ body{
     font-size: 16px;
 }
 
-.noodle{
-    display: block;
+section{
+    width: 100%;
+    height: 100%;
 }
 
-.noodle-container{
+img {
+    vertical-align: bottom;
+}
+
+.width-limited{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 32px;
-    .noodle-img{
-        width: auto;
-        height: auto;
-        max-width: 1440px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        margin-left: -720px;
-    }
-    .noodle-content-container{
-        margin-top: 291px;
-        .noodle-content-title{
-            font-size: 64px;
-            line-height: 82px;
-            font-family: "AlimamaShuHeiTi";
-            color: #1F2833;
-            margin-bottom: 12px;
-        }
-        .noodle-content-desc{
-            font-size: 16px;
-            line-height: 24px;
-            color: #5B646F;
-            margin-bottom: 32px;
-        }
-        a.noodle-email{
-            font-size: 14px;
-            font-family: "AlimamaShuHeiTi";
-            line-height: 22px;
-            padding: 9px 16px;
-            color: #FFFFFF;
-            background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
-            border-style: none;
-            border-radius: 8px;
-            text-decoration: none;
-        }
-    }
 }
 
+/*-------- 菜单栏 --------*/
 header{
     width: 100%;
     height: 72px;
@@ -119,3 +89,262 @@ header{
     background-color: #ffffff;
 }
 
+
+/*-------- 首屏模块 --------*/
+.noodle{
+    width: 100%;
+    height: 100%;
+}
+
+.noodle-point{
+    color:transparent;
+    background:linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+    -webkit-background-clip: text;
+    font-size: 88px;
+    display: inline-block;
+    height: 40px;
+}
+
+.noodle-container{
+    position: relative;
+    height: 900px;
+    .noodle-img{
+        position: absolute;
+        top: 0;
+        left: 64px;
+        max-width: 1320px;
+        height: auto;
+        z-index: -1;
+    }
+    .noodle-content-container{
+        padding-top: 291px;
+        .noodle-content-title{
+            font-size: 64px;
+            line-height: 82px;
+            font-family: 'AaHouDiHei';
+            color: #1F2833;
+            margin-bottom: 12px;
+        }
+        .noodle-content-desc{
+            font-size: 16px;
+            line-height: 24px;
+            color: #5B646F;
+            margin-bottom: 32px;
+        }
+        a.noodle-email{
+            font-size: 14px;
+            font-family: "AlimamaShuHeiTi";
+            line-height: 22px;
+            padding: 9px 16px;
+            color: #FFFFFF;
+            background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+            border-style: none;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    }
+}
+
+/*-------- 项目模块 --------*/
+.home-projects{
+    padding: 56px 0 96px 0;
+}
+
+.home-projects-title-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    font-family: "AlimamaShuHeiTi";
+    padding-bottom: 32px;
+    .home-projects-title{
+        font-size: 24px;
+        color: #1F2833;
+        display: inline-block;
+    }
+    .home-projects-more{
+        font-size: 16px;
+        color: #868B97;
+        display: inline-block;
+    }
+}
+
+.item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    .item-holder:nth-child(3n-1){
+        margin-top: 64px;
+    }
+    .item-holder{
+        border-radius: 3px;
+        overflow:hidden;
+        flex: auto;
+        height: 512px;
+        position: relative;
+        .item-img{
+            height: 100%;
+        }
+        .item-date-container{
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            color: #FFFFFF;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: medium;
+            border-radius: 64px;
+            line-height: 14px;
+            font-family: 'ITC Avant Garde Gothic Std';
+            padding: 6px 16px 4px;
+            background-color: #0A0B17CC;
+        }
+        .item-content-container{
+            position: absolute;
+            bottom: 48px;
+            left: 24px;
+            width: 336px;
+            .item-content-title{
+                font-size: 20px;
+                color: #FFFFFFF2;
+                font-family: "AlimamaShuHeiTi";
+                line-height: 32px;
+                width: 100%;
+                margin-bottom: 32px;
+            }
+            .item-content-more{
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                font-family: 'ITC Avant Garde Gothic Std';
+                color: #4186E7;
+            }
+        }
+    }
+}
+
+/*-------- 设计展览馆 --------*/
+.home-gallery-title-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    font-family: "AlimamaShuHeiTi";
+    padding-bottom: 32px;
+    .home-gallery-title{
+        font-size: 24px;
+        color: #1F2833;
+        display: inline-block;
+    }
+    .home-gallery-more{
+        font-size: 16px;
+        color: #868B97;
+        display: inline-block;
+    }
+}
+
+.gallery-container{
+    // height: 923px;
+    column-count: 4;
+    column-gap: 24px;
+    p{
+        display: none;
+    }
+}
+
+.gallery-holder{
+    break-inside: avoid-column;
+    list-style: none;
+    padding-bottom: 32px;
+    .gallery-img{
+        border-radius: 3px;
+        width: 282px;
+        height: auto;
+    }
+    .gallery-content-container{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 16px;
+        .gallery-content-date{
+            font-size: 20px;
+            font-family: 'ITC Avant Garde Gothic Std';
+            line-height: 24px;
+        }
+        .gallery-content-desc-container{
+            font-size: 14px;
+            line-height: 17px;
+            text-align: right;
+        }
+    }
+}
+
+/*-------- 页尾 --------*/
+
+.footer-container{
+    padding: 120px 0 16px 0;
+    font-family: 'ITC Avant Garde Gothic Std';
+    .footer-content-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 51px 0 48px 0;
+        .footer-social-container{
+            display: flex;
+            .footer-social-item{
+                list-style: none;
+                a{
+                    margin-right: 32px;
+                    text-align:center;
+                }
+                span{
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 500;
+                    color: #5B646F;
+                    display: inline-block;
+                    padding-right: 6px;
+                }
+                .leftright-arrow{
+                    display: inline-block;
+                    width: 16px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #868B97;
+    }
+}
+
+ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+.wechat-popover-container{
+    position: relative;
+}
+
+.wechat-popover{
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #FCFCFC;
+    position: absolute;
+    top: -200px;
+    left: -56px;
+    display: none;
+}
+
+.footer-social-item:hover .wechat-popover{
+    display: block;
+}
+
+.wechat-qrcode{
+    width: 160px;
+    height: 160px;
+}

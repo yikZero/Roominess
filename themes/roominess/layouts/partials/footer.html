@@ -1,26 +1,30 @@
 <footer>
-  <div class="footer-container">
-    <div class="footer">
-      <ul class="footer-item">
+  <div class="footer-container width-limited">
+    <img class="footer-logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Title }}">
+    <div class="footer-content-container">
+      <ul class="footer-social-container">
         {{ range site.Params.social }}
-        <li>
+        <li class="footer-social-item">
           <a href="{{ .link | safeURL }}">
             <span>{{ .name }}</span>
+            <img src="/icon/leftright-arrow.svg" alt="leftRighArrow" class="leftright-arrow">
           </a>
         </li>
         {{ end }}
-        <li>
+        <li class="footer-social-item wechat-popover-container">
           <a href="#">
             <span>Wechat</span>
-            <div class="footer-popover">
-              <img src="#">
+            <img src="/icon/leftright-arrow.svg" alt="leftRighArrow" class="leftright-arrow">
+            <div class="wechat-popover">
+              <img src="/img/qrcode.png" class="wechat-qrcode">
             </div>
           </a>
         </li>
       </ul>
-      <div class="copyright">
-        {{ site.Params.copyright | markdownify }}
-      </div>
+      <div class="footer-totop">up</div>
+    </div>
+    <div class="copyright">
+      {{ site.Params.copyright | safeHTML }}
     </div>
   </div>
 </footer>

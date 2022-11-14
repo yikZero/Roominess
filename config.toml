@@ -15,7 +15,7 @@ sectionPagesMenu = "main"
     description = "Show Myself"
     author = "yikZero"
     #noodleContent
-    noodle_title = "Hi,我是张毅吉。<br/>界面交互设计师。"
+    noodle_title = "嗨<font class='noodle-point'>·</font>我是张毅吉。<br/>界面交互设计师。"
     noodle_desc = "目前，我在杭州 @亚信科技 工作，<br/>一年界面交互设计经验。<br/>我喜欢做设计、写代码、研究些新奇玩意 😊。"
     noodle_email = "i@yikzero.com"
     #Copyright
@@ -42,24 +42,30 @@ sectionPagesMenu = "main"
     name = '首页'
     url = '/'
     weight = 1
+
+    [[menu.main]]
+    identifier = 'projects'
+    name = '项目'
+    url = '/projects/'
+    weight = 2
     
     [[menu.main]]
     identifier = 'gallery'
-    name = '设计博物馆'
+    name = '设计展览馆'
     url = '/gallery/'
-    weight = 2
+    weight = 3
 
     [[menu.main]]
     identifier = 'about'
     name = '关于我'
     url = '/about/'
-    weight = 3
+    weight = 4
 
 # -------- Plugins -------- #
 # CSS Plugins
 # [[params.plugins.css]]
 # link = "plugins/bootstrap/bootstrap.min.css"
 
-# JS Plugins
-# [[params.plugins.js]]
-# link = "plugins/jQuery/jquery.min.js"
+#JS Plugins
+[[params.plugins.js]]
+link = "plugins/waterfall.min.js"

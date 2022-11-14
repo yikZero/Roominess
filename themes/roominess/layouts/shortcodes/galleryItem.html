@@ -1,0 +1,15 @@
+{{ $galleryImg := default "example.png" (.Get "galleryImg") }}
+{{ $gallerySort := default "UI Design" (.Get "gallerySort") }}
+{{ $galleryTitle := default "Est Polulo Direction EXP-0.01" (.Get "galleryTitle") }}
+{{ $galleryDate := default "2022" (.Get "galleryDate") }}
+
+<div class="gallery-holder">
+    <img src="img/gallery/{{ $galleryImg }}" class="gallery-img">
+    <div class="gallery-content-container">
+        <div class="gallery-content-date">({{ $galleryDate }})</div>
+        <div class="gallery-content-desc-container">
+            <div class="gallery-content-sort">{{ $gallerySort }}</div>
+            <div class="gallery-content-title">{{ $galleryTitle }}</div>
+        </div>
+    </div>
+</div>

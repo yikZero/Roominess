@@ -1,13 +1,56 @@
 {{ define "main" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="noodle">
-    <div class="noodle-container">
-        <img class="noodle-img" src="/img/background.png" alt="background">
+    <div class="noodle-container width-limited">
         <div class="noodle-content-container">
             <div class="noodle-content-title">{{ site.Params.noodle_title | safeHTML }}</div>
             <div class="noodle-content-desc">{{ site.Params.noodle_desc | safeHTML }}</div>
             <a class="noodle-email" href="mailto:{{ site.Params.noodle_email | safeHTML }}">@ 联系我</a>
         </div>
+        <img class="noodle-img" src="/img/noodle_img.png" alt="头图">
     </div>
 </section>
+
+{{ with .GetPage "projects"}}
+<section class="home-projects">
+    <div class="home-projects-container width-limited">
+        <div class="home-projects-title-container">
+            <div class="home-projects-title">{{ .Title | markdownify }}</div>
+            <div class="home-projects-more-container">
+                <a class="home-projects-more" href="/projects/">更多</a>
+                <img class="home-projects-more-icon" src="/icon/right-arrow.svg" alt="more">
+            </div>
+        </div>
+        <div class="item-container">
+            {{ range first 3 .Data.Pages }}
+            <a href="{{.Permalink}}" class="item-holder">
+                <img class="item-img" src="{{ .Params.image | absURL }}">
+                <div class="item-date-container">
+                    <div class="item-date">{{ .Params.date | time.Format "2006.01.02" }}</div>
+                </div>
+                <div class="item-content-container">
+                    <div class="item-content-title">{{ .Params.title | markdownify }}</div>
+                    <div class="item-content-more">READ MORE</div>
+                </div>
+            </a>
+        {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ with .GetPage "gallery"}}
+<section class="home-gallery">
+    <div class="home-gallery-container width-limited">
+        <div class="home-gallery-title-container">
+            <div class="home-gallery-title">{{ .Title | markdownify }}</div>
+            <div class="home-gallery-more-container">
+                <a class="home-gallery-more" href="/gallery/">更多</a>
+                <img class="home-gallery-more-icon" src="/icon/right-arrow.svg" alt="more">
+            </div>
+        </div>
+        <div class="gallery-container">{{ .Content | safeHTML }}</div>
+    </div>
+</section>
+{{ end }}
 {{ end }}
