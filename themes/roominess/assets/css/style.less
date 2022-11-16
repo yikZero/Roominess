@@ -287,11 +287,14 @@ header{
     .footer-content-container{
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         padding: 51px 0 48px 0;
         .footer-social-container{
             display: flex;
             .footer-social-item{
                 list-style: none;
+                margin: 0;
+                padding: 0;
                 a{
                     margin-right: 32px;
                     text-align:center;
@@ -347,4 +350,17 @@ ul{
 .wechat-qrcode{
     width: 160px;
     height: 160px;
+}
+
+.footer-totop-container{
+    height: 40px;
+    width: 40px;
+    background-color: #ECEDF1;
+    border-radius: 4px;
+    .footer-totop{
+        padding: 8px;
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
 }

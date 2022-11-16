@@ -67,5 +67,5 @@ sectionPagesMenu = "main"
 # link = "plugins/bootstrap/bootstrap.min.css"
 
 #JS Plugins
-[[params.plugins.js]]
-link = "plugins/waterfall.min.js"
+# [[params.plugins.js]]
+# link = "plugins/waterfall.min.js"
