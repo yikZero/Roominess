@@ -1,40 +1,46 @@
 @font-face {
     font-family: "AlimamaShuHeiTi";
-    src: url(/font/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff2) format("woff2"),url(/font/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff) format("woff");
+    src: url(https://cdn.yikzero.com/font/AlimamaShuHeiTi-Bold.woff2) format("woff2"),url(https://cdn.yikzero.com/font/AlimamaShuHeiTi-Bold.woff) format("woff");
     font-display: swap;
 }
 
 @font-face {
     font-family: "ITCAvantGardeStd";
-    font-weight: 300;
-    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Bk.woff2) format("woff2");
+    font-weight: 400;
+    src: url(https://cdn.yikzero.com/font/ITCAvantGardeStd-Bk.woff2) format("woff2");
     font-display: swap;
 }
 
 @font-face {
     font-family: "ITCAvantGardeStd";
     font-weight: 500;
-    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Md.woff2) format("woff2");
+    src: url(https://cdn.yikzero.com/font/ITCAvantGardeStd-Md.woff2) format("woff2");
     font-display: swap;
 }
 
 @font-face {
     font-family: "ITCAvantGardeStd";
     font-weight: 600;
-    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Demi.woff2) format("woff2");
+    src: url(https://cdn.yikzero.com/font/ITCAvantGardeStd-Demi.woff2) format("woff2");
     font-display: swap;
 }
 
 @font-face {
     font-family: "ITCAvantGardeStd";
     font-weight: 700;
-    src: url(/font/ITCAvantGardeStd/ITCAvantGardeStd-Bold.woff2) format("woff2");
+    src: url(https://cdn.yikzero.com/font/ITCAvantGardeStd-Bold.woff2) format("woff2");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AaHouDiHei';
+    font-family: 'Aahoudihei';
     font-weight: 500;
-    src: url(font/Aahoudihei.ttf) format("ttf");
+    src: url(https://cdn.yikzero.com/font/Aahoudihei.ttf) format("ttf");
     font-display: swap;
+}
+
+@font-face {
+    font-family: 'Smiley Sans';
+    font-weight: 400;
+    src: url(https://cdn.yikzero.com/font/SmileySans-Oblique.ttf.woff2) format("woff2");
 }

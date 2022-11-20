@@ -10,10 +10,11 @@
       {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
       {{- $page_url:= $currentPage.Permalink | absLangURL }}
         <li>
-            <a {{- if eq $menu_item_url $page_url }} class="active" {{- end }} href="{{ .URL }}">
+            <a {{- if eq $menu_item_url $page_url }} class="active"{{- end }} href="{{ .URL }}">
                 {{ .Pre }}
                 <span>{{ .Name }}</span>
             </a>
+            {{/*  <img src="/icon/menuItem-hover.svg" alt="hover" class="menu-item-hover-icon ">  */}}
         </li>
       {{ end }}
         <li>

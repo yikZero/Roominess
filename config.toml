@@ -63,8 +63,8 @@ sectionPagesMenu = "main"
 
 # -------- Plugins -------- #
 # CSS Plugins
-# [[params.plugins.css]]
-# link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "css/font.css"
 
 #JS Plugins
 # [[params.plugins.js]]

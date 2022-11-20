@@ -40,8 +40,8 @@ header {
   margin: auto;
 }
 .logo-container {
-  width: 107px;
-  height: 48px;
+  width: 60px;
+  height: 40px;
 }
 .logo-container .logo {
   width: 100%;
@@ -56,22 +56,39 @@ header {
   height: auto;
   width: auto;
   margin-right: 24px;
+  position: relative;
 }
 .menu-text-container li a {
   font-size: 16px;
-  font-weight: 700;
-  font-family: "AlimamaShuHeiTi";
+  font-weight: 500;
   color: #1F2833;
   line-height: 24px;
   padding: 4px 6px;
   text-decoration: none;
   transition: color 200ms ease;
 }
-.menu-text-container li a:hover {
-  border-bottom: 2px solid #1F2833;
+.menu-text-container li a :hover {
+  color: #1F2833D9;
+}
+.menu-text-container li span {
+  line-height: 32px;
+}
+.menu-text-container li .menu-item-hover-icon {
+  width: 20px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  color: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
 }
 .menu-text-container li .active {
-  border-bottom: 2px solid #1F2833;
+  border-bottom: 1.5px solid #1F2833;
+}
+.menu-text-container li :hover {
+  border-color: #1F2833D9;
 }
 .theme-change-button {
   width: 40px;
@@ -90,7 +107,7 @@ header {
   -webkit-background-clip: text;
   font-size: 88px;
   display: inline-block;
-  height: 40px;
+  height: 80px;
 }
 .noodle-container {
   position: relative;
@@ -108,11 +125,12 @@ header {
   padding-top: 291px;
 }
 .noodle-container .noodle-content-container .noodle-content-title {
-  font-size: 64px;
-  line-height: 82px;
-  font-family: 'AaHouDiHei';
+  font-size: 72px;
+  line-height: 86px;
+  font-family: 'Smiley Sans';
   color: #1F2833;
   margin-bottom: 12px;
+  letter-spacing: 0.02em;
 }
 .noodle-container .noodle-content-container .noodle-content-desc {
   font-size: 16px;
@@ -121,10 +139,9 @@ header {
   margin-bottom: 32px;
 }
 .noodle-container .noodle-content-container a.noodle-email {
-  font-size: 14px;
-  font-family: "AlimamaShuHeiTi";
+  font-size: 16px;
   line-height: 22px;
-  padding: 9px 16px;
+  padding: 9px 12px;
   color: #FFFFFF;
   background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
   border-style: none;
@@ -182,7 +199,7 @@ header {
   font-weight: medium;
   border-radius: 64px;
   line-height: 14px;
-  font-family: 'ITC Avant Garde Gothic Std';
+  font-family: 'ITCAvantGardeStd';
   padding: 6px 16px 4px;
   background-color: #0A0B17CC;
 }
@@ -204,7 +221,7 @@ header {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  font-family: 'ITC Avant Garde Gothic Std';
+  font-family: 'ITCAvantGardeStd';
   color: #4186E7;
 }
 /*-------- 设计展览馆 --------*/
@@ -250,7 +267,7 @@ header {
 }
 .gallery-holder .gallery-content-container .gallery-content-date {
   font-size: 20px;
-  font-family: 'ITC Avant Garde Gothic Std';
+  font-family: 'ITCAvantGardeStd';
   line-height: 24px;
 }
 .gallery-holder .gallery-content-container .gallery-content-desc-container {
@@ -260,8 +277,8 @@ header {
 }
 /*-------- 页尾 --------*/
 .footer-container {
-  padding: 120px 0 16px 0;
-  font-family: 'ITC Avant Garde Gothic Std';
+  padding: 120px 32px 16px 32px;
+  font-family: 'ITCAvantGardeStd';
 }
 .footer-container .footer-content-container {
   display: flex;
@@ -296,7 +313,9 @@ header {
 }
 .footer-container .copyright {
   text-align: center;
+  font-family: 'ITCAvantGardeStd';
   font-size: 14px;
+  font-weight: 400;
   line-height: 20px;
   color: #868B97;
 }
