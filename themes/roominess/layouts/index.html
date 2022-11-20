@@ -21,16 +21,17 @@
                 <img class="home-projects-more-icon" src="/icon/right-arrow.svg" alt="more">
             </div>
         </div>
-        <div class="item-container">
+        <div class="home-item-container">
             {{ range first 3 .Data.Pages }}
-            <a href="{{.Permalink}}" class="item-holder">
-                <img class="item-img" src="{{ .Params.image | absURL }}">
-                <div class="item-date-container">
-                    <div class="item-date">{{ .Params.date | time.Format "2006.01.02" }}</div>
+            <a href="{{.Permalink}}" class="home-item-holder">
+                <img class="home-item-img" src="{{ .Params.image | absURL }}">
+                <div class="home-item-img-shadow"></div>
+                <div class="home-item-date-container">
+                    <div class="home-item-date">{{ .Params.date | time.Format "2006.01.02" }}</div>
                 </div>
-                <div class="item-content-container">
-                    <div class="item-content-title">{{ .Params.title | markdownify }}</div>
-                    <div class="item-content-more">READ MORE</div>
+                <div class="home-item-content-container">
+                    <div class="home-item-content-title">{{ .Params.title | markdownify }}</div>
+                    <div class="home-item-content-more">READ MORE</div>
                 </div>
             </a>
         {{ end }}

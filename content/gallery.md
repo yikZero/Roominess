@@ -1,5 +1,4 @@
 ---
-name: "设计展览馆 | ROOMINESS"
 title: "设计展览馆"
 layout: "gallery"
 ---

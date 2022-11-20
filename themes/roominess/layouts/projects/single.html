@@ -1,36 +1,7 @@
 {{ define "main" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="item-page {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}}>
-  {{ with .Params.image_top }}
-    <div class="item-hero-img-holder" id="home">
-      <img src="{{. | absURL}}" alt="image" class="item-hero-img">
-    </div>
-  {{ end }}
-  <div class="container wow fadeInUp item-contents" data-wow-duration="1.5s">
-    <h1 class="text-center mb-5 introduce_title">{{ .Title | markdownify }}</h1>
-    <div class="row">
-      <div class="row col-lg-9 m-auto">
-        {{ range .Params.glance }}
-        <div class="glance-holder col-lg-12">
-          <div class="glance-title">{{.name | markdownify}}</div>
-          <div class="glance-content">{{.content | markdownify}}</div>
-        </div>
-        {{ end }}
-        <div class="row item-base-holder">
-          {{ range .Params.project_info }}
-          <div class="item-base col-lg-4 col-md-4 col-sm-4">
-            <div class="item-base-title">{{.name | markdownify}}</div>
-            <div class="item-base-content">{{.content | markdownify}}</div>
-          </div>
-          {{ end }}
-        </div>
-        <hr/>
-        <div>
-          {{.Content}}
-        </div>
-      </div>
-    </div>
+<section>
+  <div class="item-content-container">
+    这是内容页
   </div>
 </section>
-  {{ .TableOfContents }}
 {{ end }}

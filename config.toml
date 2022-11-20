@@ -2,7 +2,7 @@
 
 baseURL = 'https://job.yikzero.com'
 languageCode = 'zh-CN'
-title = 'yikZero | ROOMINESS'
+title = 'yikZero'
 theme = "roominess"
 sectionPagesMenu = "main"
 

@@ -1,3 +1,26 @@
 {{ define "main" }}
-
+<section class="projects">
+    <div class="projects-container width-limited">
+        <div class="projects-title">
+            欢迎来到我的项目模块🎨，<br/>这里放置了我参与的一些项目。
+        </div>
+        {{ with .GetPage "projects"}}
+        <div class="item-container">
+            {{ range first 6 .Data.Pages }}
+            <a href="{{.Permalink}}" class="item-holder">
+                <img class="item-img" src="{{ .Params.image | absURL }}">
+                <div class="item-img-shadow"></div>
+                <div class="item-date-container">
+                    <div class="item-date">{{ .Params.date | time.Format "2006.01.02" }}</div>
+                </div>
+                <div class="item-content-container">
+                    <div class="item-content-title">{{ .Params.title | markdownify }}</div>
+                    <div class="item-content-more">READ MORE</div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
 {{ end }}

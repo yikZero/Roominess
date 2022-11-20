@@ -20,7 +20,7 @@ img {
 }
 
 .width-limited{
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 32px;
 }
@@ -40,7 +40,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    width: 1200px;
+    // min-width: 1200px;
     padding: 0 32px;
     height: 100%;
     margin: auto;
@@ -129,7 +130,7 @@ header{
         position: absolute;
         top: 0;
         left: 64px;
-        max-width: 1320px;
+        width: 1320px;
         height: auto;
         z-index: -1;
     }
@@ -186,25 +187,32 @@ header{
     }
 }
 
-.item-container{
+.home-item-container{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 24px;
     width: 100%;
-    .item-holder:nth-child(3n-1){
+    .home-item-holder:nth-child(3n-1){
         margin-top: 64px;
     }
-    .item-holder{
+    .home-item-holder{
         border-radius: 3px;
         overflow:hidden;
         flex: auto;
         height: 512px;
         position: relative;
-        .item-img{
+        .home-item-img{
             height: 100%;
         }
-        .item-date-container{
+        .home-item-img-shadow{
+            position: absolute;
+            bottom: 0;
+            height: 50%;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        .home-item-date-container{
             position: absolute;
             top: 24px;
             left: 24px;
@@ -218,22 +226,23 @@ header{
             padding: 6px 16px 4px;
             background-color: #0A0B17CC;
         }
-        .item-content-container{
+        .home-item-content-container{
             position: absolute;
             bottom: 48px;
             left: 24px;
             width: 336px;
-            .item-content-title{
+            .home-item-content-title{
                 font-size: 20px;
                 color: #FFFFFFF2;
-                font-family: "AlimamaShuHeiTi";
+                // font-family: "AlimamaShuHeiTi";
+                font-weight: 500;
                 line-height: 32px;
                 width: 100%;
                 margin-bottom: 32px;
             }
-            .item-content-more{
+            .home-item-content-more{
                 font-size: 12px;
-                font-weight: 700;
+                font-weight: 600;
                 letter-spacing: 2px;
                 font-family: 'ITCAvantGardeStd';
                 color: #4186E7;
@@ -382,5 +391,207 @@ ul{
         display: block;
         width: 24px;
         height: 24px;
+    }
+}
+
+/*-------- 项目页 --------*/
+
+.projects-title{
+    margin-top: 72px;
+    font-family: "AlimamaShuHeiTi";
+    font-size: 32px;
+    line-height: 45px;
+    width: 100%;
+    padding: 148px 0 148px 0;
+    text-align: center;
+    color: #1F2833;
+}
+.item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    .item-holder{
+        border-radius: 3px;
+        overflow:hidden;
+        width: 588px;
+        height: 397px;
+        position: relative;
+        .item-img{
+            width: 100%;
+        }
+        .item-img-shadow{
+            position: absolute;
+            bottom: 0;
+            height: 50%;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        .item-date-container{
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            color: #FFFFFF;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: medium;
+            border-radius: 64px;
+            line-height: 14px;
+            font-family: 'ITCAvantGardeStd';
+            padding: 6px 16px 4px;
+            background-color: #0A0B17CC;
+        }
+        .item-content-container{
+            position: absolute;
+            bottom: 36px;
+            left: 24px;
+            width: 540px;
+            .item-content-title{
+                font-size: 20px;
+                color: #FFFFFFF2;
+                // font-family: "AlimamaShuHeiTi";
+                font-weight: 500;
+                line-height: 32px;
+                width: 100%;
+                margin-bottom: 24px;
+            }
+            .item-content-more{
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                font-family: 'ITCAvantGardeStd';
+                color: #4186E7;
+            }
+        }
+    }
+}
+
+/*-------- 关于我 --------*/
+
+.personal-container{
+    margin-top: 180px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    .personal-img{
+        width: 510px;
+        height: 550px;
+        border-radius: 6px;
+        border: 1px solid rgba(19, 43, 69, 0.02);
+    }
+    .personal-content-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .personal-research-container{
+            height: 100%;
+        }
+        .personal-name-container{
+            padding: 8px 0 12px 0;
+            img{
+                padding-right: 12px;
+            }
+        }
+        .personal-research-content-container{
+            position: relative;
+            display: block;
+            height: 100%;
+            .personal-englishname{
+                color: #868B97;
+                font-size: 16px;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .personal-introduction-title,.personal-research-title{
+            font-size: 20px;
+            font-family: "AlimamaShuHeiTi";
+            line-height: 28px;
+            padding-bottom: 12px;
+            color: #1F2833;
+        }
+        .personal-introduction-content{
+            line-height: 24px;
+            color: #5B646F;
+        }
+        .personal-research-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background-color: #FCFCFC;
+            border-radius: 3px;
+            margin-bottom: 8px;
+            .perosonal-research-item-main img{
+                padding-right: 12px;
+            }
+            .perosonal-research-item-main span{
+                font-size: 16px;
+                line-height: 22px;
+                color: #5B646F;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.personal-more{
+    display: block;
+    margin: 114px auto 0 auto;
+}
+
+.personal-habbit-container{
+    margin-top: 56px;
+}
+
+.personal-habbit-title-container{
+    padding-bottom: 16px;
+    .personal-habbit-title{
+        font-family: "AlimamaShuHeiTi";
+        color: #1F2833;
+        font-size: 32px;
+        line-height: 45px;
+        padding-bottom: 8px;
+    }
+    .perosonal-habbit-title-desc{
+        font-size: 16px;
+        line-height: 24px;
+        color: #5B646F;
+    }
+}
+
+.personal-habbit-content-container{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    width: 384px;
+    height: auto;
+    background-color: #868B97;
+    border-radius: 3px;
+    .peroson-habbit-content-main{
+        display: flex;
+    }
+    .person-habbit-content-desc{
+        padding-left:32px;
+    }
+    .personal-habbit-item-icon{
+        padding-right: 12px;
+    }
+    .personal-habbit-item-title{
+        font-size: 16px;
+        line-height: 22px;
+        color: #FCFCFC;
+        padding-bottom: 8px;
+        font-weight: 400;
+    }
+    .person-habbit-content-desc{
+        font-size: 14px;
+        color: #FFFFFFD9;
+        font-weight: 400;
     }
 }
