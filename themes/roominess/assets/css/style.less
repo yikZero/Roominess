@@ -398,11 +398,12 @@ ul{
 
 .projects-title{
     margin-top: 72px;
-    font-family: "AlimamaShuHeiTi";
-    font-size: 32px;
-    line-height: 45px;
+    // font-family: "AlimamaShuHeiTi";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
     width: 100%;
-    padding: 148px 0 148px 0;
+    padding: 120px 0 120px 0;
     text-align: center;
     color: #1F2833;
 }
@@ -487,17 +488,7 @@ ul{
         gap: 12px;
         .personal-research-container{
             height: 100%;
-        }
-        .personal-name-container{
-            padding: 8px 0 12px 0;
-            img{
-                padding-right: 12px;
-            }
-        }
-        .personal-research-content-container{
             position: relative;
-            display: block;
-            height: 100%;
             .personal-englishname{
                 color: #868B97;
                 font-size: 16px;
@@ -506,6 +497,15 @@ ul{
                 bottom: 0;
                 right: 0;
             }
+        }
+        .personal-name-container{
+            padding: 8px 0 12px 0;
+            img{
+                padding-right: 12px;
+            }
+        }
+        .personal-research-content-container{
+            display: block;
         }
         .personal-introduction-title,.personal-research-title{
             font-size: 20px;
@@ -542,11 +542,21 @@ ul{
 
 .personal-more{
     display: block;
-    margin: 114px auto 0 auto;
+    margin: 100px auto 0 auto;
+    color: #DEE0E2;
 }
 
 .personal-habbit-container{
-    margin-top: 56px;
+    margin-top: 96px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.personal-habbit-content-img{
+    width: 100%;
+    max-width: 796px;
+    border-radius: 3px;
 }
 
 .personal-habbit-title-container{
@@ -568,30 +578,48 @@ ul{
 .personal-habbit-content-container{
     display: flex;
     flex-direction: column;
-    padding: 16px 20px;
+    padding: 20px;
+    margin-bottom: 8px;
     width: 384px;
     height: auto;
-    background-color: #868B97;
     border-radius: 3px;
-    .peroson-habbit-content-main{
+    background-color: #FCFCFC;
+    .person-habbit-content-main{
+        color: #4186E7;
         display: flex;
+        align-items: center;
     }
     .person-habbit-content-desc{
+        display: none;
         padding-left:32px;
     }
     .personal-habbit-item-icon{
         padding-right: 12px;
+        stroke: #4186E7;
     }
     .personal-habbit-item-title{
         font-size: 16px;
         line-height: 22px;
-        color: #FCFCFC;
-        padding-bottom: 8px;
+        color: #5B646F;
         font-weight: 400;
     }
     .person-habbit-content-desc{
         font-size: 14px;
+        line-height: 22px;
         color: #FFFFFFD9;
         font-weight: 400;
+    }
+}
+
+.personal-habbit-content-container.active{
+    background-color: #868B97;
+    .personal-habbit-item-title{
+        color: #FCFCFC;
+    }
+    .person-habbit-content-desc{
+        display: block;
+    }
+    .person-habbit-content-main{
+        padding-bottom: 8px;
     }
 }
