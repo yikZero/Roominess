@@ -509,15 +509,16 @@ ul {
   color: #DEE0E2;
 }
 .personal-habbit-container {
+  width: 100%;
   margin-top: 96px;
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
 .personal-habbit-content-img {
-  width: 100%;
-  max-width: 796px;
   border-radius: 3px;
+  width: 792px;
+  height: auto;
 }
 .personal-habbit-title-container {
   padding-bottom: 16px;
@@ -534,13 +535,14 @@ ul {
   line-height: 24px;
   color: #5B646F;
 }
+.personal-habbit-content-outer {
+  width: auto;
+}
 .personal-habbit-content-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
   margin-bottom: 8px;
-  width: 384px;
-  height: auto;
   border-radius: 3px;
   background-color: #FCFCFC;
 }
