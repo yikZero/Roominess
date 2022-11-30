@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    background-color: #E7E7E9;
+    background-color: #F4F5F7;
     display: block;
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
     font-size: 16px;
@@ -28,12 +28,15 @@ img {
 /*-------- 菜单栏 --------*/
 header{
     width: 100%;
-    height: 72px;
-    position: absolute;
+    height: 64px;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+    backdrop-filter: saturate(50%) blur(8px);
+    background: #F4F5F7B2;
+    display: block;
 }
 
 .menu-container{
@@ -41,15 +44,13 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 1200px;
-    // min-width: 1200px;
     padding: 0 32px;
-    height: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .logo-container{
-    width: 60px;
-    height: 40px;
+    width: 48px;
+    height: 32px;
     .logo{
         width: 100%;
         height: 100%;
@@ -63,19 +64,20 @@ header{
         list-style: none;
         height: auto;
         width: auto;
-        margin-right: 24px;
+        margin-left: 24px;
         position: relative;
+        :hover{
+            color: #4186E7;
+        }
         a{  
-            font-size: 16px;
+            display: block;
+            font-size: 14px;
             font-weight: 500;
             color: #1F2833;
-            line-height: 24px;
+            line-height: 64px;
             padding: 4px 6px;
             text-decoration: none;
             transition: color 200ms ease;
-            :hover{
-                color: #1F2833D9;
-            }
         }
         span{
             line-height: 32px;
@@ -89,13 +91,12 @@ header{
             bottom: 0;
             margin: auto;
             display: none;
-            color: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
         }
+        // .active{
+        //     border-bottom: 1.5px solid #1F2833;
+        // }
         .active{
-            border-bottom: 1.5px solid #1F2833;
-        }
-        :hover{
-            border-color: #1F2833D9;
+            color: #4186E7;
         }
     }
 }
