@@ -66,6 +66,6 @@ sectionPagesMenu = "main"
 [[params.plugins.css]]
 link = "css/font.css"
 
-#JS Plugins
+# # JS Plugins
 # [[params.plugins.js]]
-# link = "plugins/waterfall.min.js"
+# link = "plugins/jquery.min.js"

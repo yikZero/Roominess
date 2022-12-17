@@ -1,3 +1,26 @@
 {{ define "main" }}
-
+{{ with .GetPage "gallery"}}
+<section class="gallery width-limited">
+<div class="gallery-header">
+    <div class="gallery-header-main-container">
+        <div class="logo-container">
+            <img class="logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Title }}">
+        </div>
+        <div class="gallery-header-title-container">
+            <div class="gallery-header-title">{{ .Title | markdownify }} 🖼️</div>
+            <div class="gallery-header-desc">{{ .Params.desc | markdownify }}</div>
+        </div>
+    </div>
+    <div class="gallery-header-sort-outter">
+    {{ range .Params.item_sort }}
+    <div class="gallery-header-sort-container">
+        <img class="gallery-header-sort-icon" src="/icon/gallery/{{ .id }}.svg">
+        <div class="gallery-header-sort-item" id="{{ .id }}">{{ .name }}</div>
+    </div>
+    {{ end }}
+    </div>
+</div>
+<div class="gallery-container">{{ .Content | safeHTML }}</div>
+</section>
+{{ end }}
 {{ end }}

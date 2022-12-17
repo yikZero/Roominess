@@ -1,3 +1,9 @@
+:root {
+  --Text-Light-1: #1F2833;
+  --Text-Light-2: #5B646F;
+  --Text-Light-3: #868B97;
+  --Primary-Blue-5: #4186E7;
+}
 html {
   width: 100%;
   height: 100%;
@@ -33,6 +39,9 @@ header {
   background: #F4F5F7B2;
   display: block;
 }
+.hide {
+  top: -64px;
+}
 .menu-container {
   display: flex;
   justify-content: space-between;
@@ -61,33 +70,23 @@ header {
   position: relative;
 }
 .menu-text-container li :hover {
-  color: #4186E7;
+  color: var(--Primary-Blue-5);
 }
 .menu-text-container li a {
   display: block;
   font-size: 14px;
   font-weight: 500;
-  color: #1F2833;
+  color: var(--Text-Light-1);
   line-height: 64px;
-  padding: 4px 6px;
+  padding: 0 6px;
   text-decoration: none;
   transition: color 200ms ease;
 }
 .menu-text-container li span {
   line-height: 32px;
 }
-.menu-text-container li .menu-item-hover-icon {
-  width: 20px;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  display: none;
-}
 .menu-text-container li .active {
-  color: #4186E7;
+  color: var(--Primary-Blue-5);
 }
 .theme-change-button {
   width: 40px;
@@ -102,7 +101,7 @@ header {
 }
 .noodle-point {
   color: transparent;
-  background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+  background: linear-gradient(90deg, #67A2EB 0%, var(--Primary-Blue-5) 100%);
   -webkit-background-clip: text;
   font-size: 88px;
   display: inline-block;
@@ -127,14 +126,14 @@ header {
   font-size: 72px;
   line-height: 86px;
   font-family: 'Smiley Sans';
-  color: #1F2833;
+  color: var(--Text-Light-1);
   margin-bottom: 12px;
   letter-spacing: 0.02em;
 }
 .noodle-container .noodle-content-container .noodle-content-desc {
   font-size: 16px;
   line-height: 24px;
-  color: #5B646F;
+  color: var(--Text-Light-2);
   margin-bottom: 32px;
 }
 .noodle-container .noodle-content-container a.noodle-email {
@@ -142,7 +141,7 @@ header {
   line-height: 22px;
   padding: 9px 12px;
   color: #FFFFFF;
-  background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+  background: linear-gradient(90deg, #67A2EB 0%, var(--Primary-Blue-5) 100%);
   border-style: none;
   border-radius: 8px;
   text-decoration: none;
@@ -155,17 +154,20 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  font-family: "AlimamaShuHeiTi";
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 .home-projects-title-container .home-projects-title {
+  font-family: "HYYakuHei";
   font-size: 24px;
-  color: #1F2833;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--Text-Light-1);
   display: inline-block;
 }
 .home-projects-title-container .home-projects-more {
   font-size: 16px;
-  color: #868B97;
+  font-weight: 500;
+  color: var(--Text-Light-3);
   display: inline-block;
 }
 .home-item-container {
@@ -228,24 +230,27 @@ header {
   font-weight: 600;
   letter-spacing: 2px;
   font-family: 'ITCAvantGardeStd';
-  color: #4186E7;
+  color: var(--Primary-Blue-5);
 }
 /*-------- 设计展览馆 --------*/
 .home-gallery-title-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  font-family: "AlimamaShuHeiTi";
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 }
 .home-gallery-title-container .home-gallery-title {
+  font-family: "HYYakuHei";
   font-size: 24px;
-  color: #1F2833;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--Text-Light-1);
   display: inline-block;
 }
 .home-gallery-title-container .home-gallery-more {
   font-size: 16px;
-  color: #868B97;
+  font-weight: 500;
+  color: var(--Text-Light-3);
   display: inline-block;
 }
 .gallery-container {
@@ -255,31 +260,87 @@ header {
 .gallery-container p {
   display: none;
 }
-.gallery-holder {
+.home-gallery .gallery-holder {
   break-inside: avoid-column;
   list-style: none;
   padding-bottom: 32px;
 }
-.gallery-holder .gallery-img {
+.gallery-img {
   border-radius: 3px;
-  width: 282px;
+  width: 100%;
   height: auto;
 }
-.gallery-holder .gallery-content-container {
+.gallery-content-container {
   display: flex;
+  width: 100%;
   align-items: flex-end;
   justify-content: space-between;
   margin-top: 16px;
 }
-.gallery-holder .gallery-content-container .gallery-content-date {
+.gallery-content-container .gallery-content-date {
   font-size: 20px;
   font-family: 'ITCAvantGardeStd';
   line-height: 24px;
 }
-.gallery-holder .gallery-content-container .gallery-content-desc-container {
+.gallery-content-container .gallery-content-desc-container {
   font-size: 14px;
   line-height: 17px;
   text-align: right;
+}
+.gallery-header {
+  margin-top: 160px;
+}
+.gallery-header .logo-container {
+  display: none;
+}
+.gallery-header .gallery-header-main-container .gallery-header-title-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+.gallery-header .gallery-header-main-container .gallery-header-title-container .gallery-header-title {
+  color: var(--Text-Light-1);
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "HYYakuHei";
+  font-weight: 700;
+}
+.gallery-header .gallery-header-main-container .gallery-header-title-container .gallery-header-desc {
+  color: var(--Text-Light-2);
+}
+.gallery-header .gallery-header-sort-outter {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+.gallery-header .gallery-header-sort-outter .gallery-header-sort-container {
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 6px 12px;
+  border: 1px solid rgba(31, 40, 51, 0.16);
+}
+.gallery-header .gallery-header-sort-outter .gallery-header-sort-container .gallery-header-sort-icon {
+  padding-right: 6px;
+}
+.gallery-header .gallery-header-sort-outter .gallery-header-sort-container .gallery-header-sort-item {
+  font-size: 16px;
+  color: var(--Text-Light-2);
+}
+.gallery .gallery-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 650px;
+  overflow-x: scroll;
+}
+.gallery .gallery-container .gallery-holder {
+  width: 256px;
+  padding-bottom: 32px;
 }
 /*-------- 页尾 --------*/
 .footer-container {
@@ -308,7 +369,7 @@ header {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
-  color: #5B646F;
+  color: var(--Text-Light-2);
   display: inline-block;
   padding-right: 6px;
 }
@@ -323,7 +384,7 @@ header {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #868B97;
+  color: var(--Text-Light-3);
 }
 ul {
   margin-block-start: 0;
@@ -354,10 +415,11 @@ ul {
   width: 40px;
   background-color: #ECEDF1;
   border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  z-index: 99999;
 }
 .footer-totop-container .footer-totop {
-  padding: 8px;
-  display: block;
   width: 24px;
   height: 24px;
 }
@@ -370,7 +432,7 @@ ul {
   width: 100%;
   padding: 120px 0 120px 0;
   text-align: center;
-  color: #1F2833;
+  color: var(--Text-Light-1);
 }
 .item-container {
   display: flex;
@@ -378,6 +440,7 @@ ul {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 24px;
+  margin-top: 48px;
 }
 .item-container .item-holder {
   border-radius: 3px;
@@ -429,7 +492,7 @@ ul {
   font-weight: 600;
   letter-spacing: 2px;
   font-family: 'ITCAvantGardeStd';
-  color: #4186E7;
+  color: var(--Primary-Blue-5);
 }
 /*-------- 关于我 --------*/
 .personal-container {
@@ -455,7 +518,7 @@ ul {
   position: relative;
 }
 .personal-container .personal-content-container .personal-research-container .personal-englishname {
-  color: #868B97;
+  color: var(--Text-Light-3);
   font-size: 16px;
   display: block;
   position: absolute;
@@ -463,7 +526,16 @@ ul {
   right: 0;
 }
 .personal-container .personal-content-container .personal-name-container {
-  padding: 8px 0 12px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.personal-container .personal-content-container .personal-name-container .personal-name {
+  font-size: 32px;
+  font-family: "HYYakuHei";
+  font-weight: 700;
+  color: var(--Text-Light-1);
+  padding-right: 16px;
 }
 .personal-container .personal-content-container .personal-name-container img {
   padding-right: 12px;
@@ -474,14 +546,15 @@ ul {
 .personal-container .personal-content-container .personal-introduction-title,
 .personal-container .personal-content-container .personal-research-title {
   font-size: 20px;
-  font-family: "AlimamaShuHeiTi";
+  font-family: "HYYakuHei";
+  font-weight: 600;
   line-height: 28px;
   padding-bottom: 12px;
-  color: #1F2833;
+  color: var(--Text-Light-1);
 }
 .personal-container .personal-content-container .personal-introduction-content {
   line-height: 24px;
-  color: #5B646F;
+  color: var(--Text-Light-2);
 }
 .personal-container .personal-content-container .personal-research-item {
   display: flex;
@@ -499,7 +572,7 @@ ul {
 .personal-container .personal-content-container .personal-research-item .perosonal-research-item-main span {
   font-size: 16px;
   line-height: 22px;
-  color: #5B646F;
+  color: var(--Text-Light-2);
   font-weight: 400;
 }
 .personal-more {
@@ -523,8 +596,9 @@ ul {
   padding-bottom: 16px;
 }
 .personal-habbit-title-container .personal-habbit-title {
-  font-family: "AlimamaShuHeiTi";
-  color: #1F2833;
+  font-family: "HYYakuHei";
+  font-weight: 700;
+  color: var(--Text-Light-1);
   font-size: 32px;
   line-height: 45px;
   padding-bottom: 8px;
@@ -532,7 +606,7 @@ ul {
 .personal-habbit-title-container .perosonal-habbit-title-desc {
   font-size: 16px;
   line-height: 24px;
-  color: #5B646F;
+  color: var(--Text-Light-2);
 }
 .personal-habbit-content-outer {
   width: auto;
@@ -546,7 +620,7 @@ ul {
   background-color: #FCFCFC;
 }
 .personal-habbit-content-container .person-habbit-content-main {
-  color: #4186E7;
+  color: var(--Primary-Blue-5);
   display: flex;
   align-items: center;
 }
@@ -556,12 +630,12 @@ ul {
 }
 .personal-habbit-content-container .personal-habbit-item-icon {
   padding-right: 12px;
-  stroke: #4186E7;
+  stroke: var(--Primary-Blue-5);
 }
 .personal-habbit-content-container .personal-habbit-item-title {
   font-size: 16px;
   line-height: 22px;
-  color: #5B646F;
+  color: var(--Text-Light-2);
   font-weight: 400;
 }
 .personal-habbit-content-container .person-habbit-content-desc {
@@ -571,7 +645,7 @@ ul {
   font-weight: 400;
 }
 .personal-habbit-content-container.active {
-  background-color: #868B97;
+  background-color: var(--Text-Light-3);
 }
 .personal-habbit-content-container.active .personal-habbit-item-title {
   color: #FCFCFC;
@@ -581,4 +655,22 @@ ul {
 }
 .personal-habbit-content-container.active .person-habbit-content-main {
   padding-bottom: 8px;
+}
+/*-------- 文章内页 --------*/
+.item-content-background {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+}
+.item-content-background .item-backgroundImg {
+  height: 440px;
+  width: 100%;
+  object-fit: cover;
+}
+.item-content-background .item-backgroundImg-cover {
+  position: absolute;
+  top: 0;
+  height: 440px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(13, 18, 21, 0) 0%, #0D1215 100%);
 }

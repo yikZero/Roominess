@@ -1,8 +1,24 @@
 {{ define "main" }}
 <section class="projects">
     <div class="projects-container width-limited">
-        <div class="projects-title">
-            欢迎来到我的项目模块🎨，<br/>这里放置了我参与的一些项目。
+        <div class="gallery-header">
+            <div class="gallery-header-main-container">
+                <div class="logo-container">
+                    <img class="logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Title }}">
+                </div>
+                <div class="gallery-header-title-container">
+                    <div class="gallery-header-title">{{ .Title | markdownify }} 👓</div>
+                    <div class="gallery-header-desc">{{ .Params.desc | markdownify }}</div>
+                </div>
+            </div>
+            <div class="gallery-header-sort-outter">
+            {{ range .Params.item_sort }}
+            <div class="gallery-header-sort-container">
+                <img class="gallery-header-sort-icon" src="/icon/gallery/{{ .id }}.svg">
+                <div class="gallery-header-sort-item" id="{{ .id }}">{{ .name }}</div>
+            </div>
+            {{ end }}
+            </div>
         </div>
         {{ with .GetPage "projects"}}
         <div class="item-container">
@@ -14,7 +30,7 @@
                     <div class="item-date">{{ .Params.date | time.Format "2006.01.02" }}</div>
                 </div>
                 <div class="item-content-container">
-                    <div class="item-content-title">{{ .Params.title | markdownify }}</div>
+                    <div class="item-content-title">{{ .Params.title | markdownify }}：{{ .Params.desc | markdownify }}</div>
                     <div class="item-content-more">READ MORE</div>
                 </div>
             </a>

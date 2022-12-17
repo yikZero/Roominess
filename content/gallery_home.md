@@ -19,11 +19,3 @@ item_sort:
 {{< galleryItem galleryImg="05.png" gallerySort="" galleryTitle="" galleryDate="" >}}
 {{< galleryItem galleryImg="06.png" gallerySort="" galleryTitle="" galleryDate="" >}}
 {{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}
-{{< galleryItem galleryImg="07.png" gallerySort="" galleryTitle="" galleryDate="" >}}

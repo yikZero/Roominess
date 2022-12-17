@@ -1,7 +1,27 @@
 {{ define "main" }}
+<style>{{.Params.custom_css | safeCSS}}</style>
+<div class="item-content-background">
+  <img class="item-backgroundImg" src="{{.Params.article_image }}" alt="">
+  <div class="item-backgroundImg-cover"></div>
+</div>
+<div class="item-content-header">
+  <div class="item-title-container">
+    <img class="item-icon" src="{{.Params.icon }}" alt="标志">
+    <div class="item-title">{{ .Params.title | markdownify}}</div>
+  </div>
+  <div class="item-content-desc">{{ .Params.desc | markdownify}}</div>
+  <div class="item-info-outter">
+    {{ range .Params.project_info }}
+    <div class="item-info-container">
+      <div class="item-info-title">{{ .name | markdownify}}</div>
+      <div class="item-info-desc">{{ .content | markdownify}}</div>
+    </div>
+    {{ end }}
+  </div>
+</div>
 <section>
   <div class="item-content-container">
-    这是内容页
+    {{ .Content | safeHTML }}
   </div>
 </section>
 {{ end }}

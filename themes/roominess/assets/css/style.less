@@ -1,3 +1,10 @@
+:root{
+    --Text-Light-1: #1F2833;
+    --Text-Light-2: #5B646F;
+    --Text-Light-3: #868B97;
+    --Primary-Blue-5: #4186E7;
+}
+
 html{
     width: 100%;
     height: 100%;
@@ -39,6 +46,10 @@ header{
     display: block;
 }
 
+.hide{
+    top: -64px;
+}
+
 .menu-container{
     display: flex;
     justify-content: space-between;
@@ -67,36 +78,23 @@ header{
         margin-left: 24px;
         position: relative;
         :hover{
-            color: #4186E7;
+            color: var(--Primary-Blue-5);
         }
         a{  
             display: block;
             font-size: 14px;
             font-weight: 500;
-            color: #1F2833;
+            color: var(--Text-Light-1);
             line-height: 64px;
-            padding: 4px 6px;
+            padding: 0 6px;
             text-decoration: none;
             transition: color 200ms ease;
         }
         span{
             line-height: 32px;
         }
-        .menu-item-hover-icon{
-            width: 20px;
-            height: 4px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            display: none;
-        }
-        // .active{
-        //     border-bottom: 1.5px solid #1F2833;
-        // }
         .active{
-            color: #4186E7;
+            color: var(--Primary-Blue-5);
         }
     }
 }
@@ -117,7 +115,7 @@ header{
 
 .noodle-point{
     color:transparent;
-    background:linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+    background:linear-gradient(90deg, #67A2EB 0%, var(--Primary-Blue-5) 100%);
     -webkit-background-clip: text;
     font-size: 88px;
     display: inline-block;
@@ -141,23 +139,24 @@ header{
             font-size: 72px;
             line-height: 86px;
             font-family: 'Smiley Sans';
-            color: #1F2833;
+            color: var(--Text-Light-1);
             margin-bottom: 12px;
             letter-spacing: 0.02em;
         }
         .noodle-content-desc{
             font-size: 16px;
             line-height: 24px;
-            color: #5B646F;
+            color: var(--Text-Light-2);
             margin-bottom: 32px;
         }
         a.noodle-email{
             font-size: 16px;
-            // font-family: "AlimamaShuHeiTi";
+            // font-family: "HYYakuHei";
+            // font-weight: 700;
             line-height: 22px;
             padding: 9px 12px;
             color: #FFFFFF;
-            background: linear-gradient(90deg, #67A2EB 0%, #4186E7 100%);
+            background: linear-gradient(90deg, #67A2EB 0%, var(--Primary-Blue-5) 100%);
             border-style: none;
             border-radius: 8px;
             text-decoration: none;
@@ -174,16 +173,19 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: space-between; 
-    font-family: "AlimamaShuHeiTi";
-    padding-bottom: 32px;
+    padding-bottom: 28px;
     .home-projects-title{
+        font-family: "HYYakuHei";
         font-size: 24px;
-        color: #1F2833;
+        font-weight: 700;
+        line-height: 24px;
+        color: var(--Text-Light-1);
         display: inline-block;
     }
     .home-projects-more{
         font-size: 16px;
-        color: #868B97;
+        font-weight: 500;
+        color: var(--Text-Light-3);
         display: inline-block;
     }
 }
@@ -246,7 +248,7 @@ header{
                 font-weight: 600;
                 letter-spacing: 2px;
                 font-family: 'ITCAvantGardeStd';
-                color: #4186E7;
+                color: var(--Primary-Blue-5);
             }
         }
     }
@@ -257,16 +259,19 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: space-between; 
-    font-family: "AlimamaShuHeiTi";
-    padding-bottom: 32px;
+    padding-bottom: 28px;
     .home-gallery-title{
+        font-family: "HYYakuHei";
         font-size: 24px;
-        color: #1F2833;
+        font-weight: 700;
+        line-height: 24px;
+        color: var(--Text-Light-1);
         display: inline-block;
     }
     .home-gallery-more{
         font-size: 16px;
-        color: #868B97;
+        font-weight: 500;
+        color: var(--Text-Light-3);
         display: inline-block;
     }
 }
@@ -280,30 +285,92 @@ header{
     }
 }
 
-.gallery-holder{
+.home-gallery .gallery-holder{
     break-inside: avoid-column;
     list-style: none;
     padding-bottom: 32px;
-    .gallery-img{
-        border-radius: 3px;
-        width: 282px;
-        height: auto;
+}
+
+.gallery-img{
+    border-radius: 3px;
+    width: 100%;
+    height: auto;
+}
+.gallery-content-container{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 16px;
+    .gallery-content-date{
+        font-size: 20px;
+        font-family: 'ITCAvantGardeStd';
+        line-height: 24px;
     }
-    .gallery-content-container{
+    .gallery-content-desc-container{
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+    }
+}
+
+.gallery-header{
+    margin-top: 160px;
+    .logo-container{
+        display: none;
+    }
+    .gallery-header-main-container{
+        .gallery-header-title-container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 12px;
+            .gallery-header-title{
+                color: var(--Text-Light-1);
+                font-size: 32px;
+                line-height: 32px;
+                font-family: "HYYakuHei";
+                font-weight: 700;
+            }
+            .gallery-header-desc{
+                color: var(--Text-Light-2);
+            }
+        }
+    }
+    .gallery-header-sort-outter{
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-top: 16px;
-        .gallery-content-date{
-            font-size: 20px;
-            font-family: 'ITCAvantGardeStd';
-            line-height: 24px;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+        .gallery-header-sort-container{
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+            padding: 6px 12px;
+            border: 1px solid rgba(31, 40, 51, 0.16);
+            .gallery-header-sort-icon{
+                padding-right: 6px;
+            }
+            .gallery-header-sort-item{
+                font-size: 16px;
+                color: var(--Text-Light-2);
+            }
         }
-        .gallery-content-desc-container{
-            font-size: 14px;
-            line-height: 17px;
-            text-align: right;
-        }
+    }
+}
+
+
+.gallery .gallery-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 650px;
+    overflow-x: scroll;
+    .gallery-holder{
+        width: 256px;
+        padding-bottom: 32px;
     }
 }
 
@@ -331,7 +398,7 @@ header{
                     font-size: 16px;
                     line-height: 20px;
                     font-weight: 500;
-                    color: #5B646F;
+                    color: var(--Text-Light-2);
                     display: inline-block;
                     padding-right: 6px;
                 }
@@ -349,7 +416,7 @@ header{
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        color: #868B97;
+        color: var(--Text-Light-3);
     }
 }
 
@@ -387,9 +454,10 @@ ul{
     width: 40px;
     background-color: #ECEDF1;
     border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    z-index: 99999;
     .footer-totop{
-        padding: 8px;
-        display: block;
         width: 24px;
         height: 24px;
     }
@@ -399,14 +467,13 @@ ul{
 
 .projects-title{
     margin-top: 72px;
-    // font-family: "AlimamaShuHeiTi";
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
     width: 100%;
     padding: 120px 0 120px 0;
     text-align: center;
-    color: #1F2833;
+    color: var(--Text-Light-1);
 }
 .item-container{
     display: flex;
@@ -414,6 +481,7 @@ ul{
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 24px;
+    margin-top: 48px;
     .item-holder{
         border-radius: 3px;
         overflow:hidden;
@@ -463,7 +531,7 @@ ul{
                 font-weight: 600;
                 letter-spacing: 2px;
                 font-family: 'ITCAvantGardeStd';
-                color: #4186E7;
+                color: var(--Primary-Blue-5);
             }
         }
     }
@@ -491,7 +559,7 @@ ul{
             height: 100%;
             position: relative;
             .personal-englishname{
-                color: #868B97;
+                color: var(--Text-Light-3);
                 font-size: 16px;
                 display: block;
                 position: absolute;
@@ -500,7 +568,16 @@ ul{
             }
         }
         .personal-name-container{
-            padding: 8px 0 12px 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            .personal-name{
+                font-size: 32px;
+                font-family: "HYYakuHei";
+                font-weight: 700;
+                color: var(--Text-Light-1);
+                padding-right: 16px;
+            }
             img{
                 padding-right: 12px;
             }
@@ -510,14 +587,15 @@ ul{
         }
         .personal-introduction-title,.personal-research-title{
             font-size: 20px;
-            font-family: "AlimamaShuHeiTi";
+            font-family: "HYYakuHei";
+            font-weight: 600;
             line-height: 28px;
             padding-bottom: 12px;
-            color: #1F2833;
+            color: var(--Text-Light-1);
         }
         .personal-introduction-content{
             line-height: 24px;
-            color: #5B646F;
+            color: var(--Text-Light-2);
         }
         .personal-research-item{
             display: flex;
@@ -534,7 +612,7 @@ ul{
             .perosonal-research-item-main span{
                 font-size: 16px;
                 line-height: 22px;
-                color: #5B646F;
+                color: var(--Text-Light-2);
                 font-weight: 400;
             }
         }
@@ -564,8 +642,9 @@ ul{
 .personal-habbit-title-container{
     padding-bottom: 16px;
     .personal-habbit-title{
-        font-family: "AlimamaShuHeiTi";
-        color: #1F2833;
+        font-family: "HYYakuHei";
+        font-weight: 700;
+        color: var(--Text-Light-1);
         font-size: 32px;
         line-height: 45px;
         padding-bottom: 8px;
@@ -573,7 +652,7 @@ ul{
     .perosonal-habbit-title-desc{
         font-size: 16px;
         line-height: 24px;
-        color: #5B646F;
+        color: var(--Text-Light-2);
     }
 }
 
@@ -589,7 +668,7 @@ ul{
     border-radius: 3px;
     background-color: #FCFCFC;
     .person-habbit-content-main{
-        color: #4186E7;
+        color: var(--Primary-Blue-5);
         display: flex;
         align-items: center;
     }
@@ -599,12 +678,12 @@ ul{
     }
     .personal-habbit-item-icon{
         padding-right: 12px;
-        stroke: #4186E7;
+        stroke: var(--Primary-Blue-5);
     }
     .personal-habbit-item-title{
         font-size: 16px;
         line-height: 22px;
-        color: #5B646F;
+        color: var(--Text-Light-2);
         font-weight: 400;
     }
     .person-habbit-content-desc{
@@ -616,7 +695,7 @@ ul{
 }
 
 .personal-habbit-content-container.active{
-    background-color: #868B97;
+    background-color: var(--Text-Light-3);
     .personal-habbit-item-title{
         color: #FCFCFC;
     }
@@ -625,5 +704,25 @@ ul{
     }
     .person-habbit-content-main{
         padding-bottom: 8px;
+    }
+}
+
+/*-------- 文章内页 --------*/
+
+.item-content-background{
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    .item-backgroundImg{
+        height: 440px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .item-backgroundImg-cover{
+        position:absolute;
+        top: 0;
+        height: 440px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(13, 18, 21, 0) 0%, #0D1215 100%);
     }
 }

@@ -37,7 +37,7 @@
                     <div class="home-item-date">{{ .Params.date | time.Format "2006.01.02" }}</div>
                 </div>
                 <div class="home-item-content-container">
-                    <div class="home-item-content-title">{{ .Params.title | markdownify }}</div>
+                    <div class="home-item-content-title">{{ .Params.title | markdownify }}：{{ .Params.desc | markdownify }}</div>
                     <div class="home-item-content-more">READ MORE</div>
                 </div>
             </a>
@@ -47,7 +47,7 @@
 </section>
 {{ end }}
 
-{{ with .GetPage "gallery"}}
+{{ with .GetPage "gallery_home"}}
 <section class="home-gallery">
     <div class="home-gallery-container width-limited">
         <div class="home-gallery-title-container">

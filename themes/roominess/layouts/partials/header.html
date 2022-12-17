@@ -1,5 +1,5 @@
 <!-- Start Menu -->
-<header>
+<header class="header">
   <div class="menu-container">
     <a class="logo-container" href="{{ site.BaseURL | relLangURL }}">
       <img class="logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Title }}">
@@ -14,7 +14,6 @@
                 {{ .Pre }}
                 <span>{{ .Name }}</span>
             </a>
-            {{/*  <img src="/icon/menuItem-hover.svg" alt="hover" class="menu-item-hover-icon ">  */}}
         </li>
       {{ end }}
         <li>
